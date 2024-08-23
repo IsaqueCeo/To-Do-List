@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Avançada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="avatar.png" alt="Avatar" id="avatar">
+            <h2>Bem-vindo, Usuário!</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" id="nav-all">Todas as Tarefas</a></li>
+                <li><a href="#" id="nav-pending">Pendentes</a></li>
+                <li><a href="#" id="nav-completed">Concluídas</a></li>
+                <li><a href="#" id="nav-today">Para Hoje</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Minha To-Do List Avançada</h1>
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <button id="dark-mode-toggle">🌙</button>
+        </header>
+        <div class="task-controls">
+            <input type="text" id="task-input" placeholder="Adicione uma nova tarefa">
+            <input type="date" id="due-date">
+            <select id="category-select">
+                <option value="Geral">Geral</option>
+                <option value="Trabalho">Trabalho</option>
+                <option value="Pessoal">Pessoal</option>
+                <option value="Estudos">Estudos</option>
+            </select>
+            <button id="add-task-btn">Adicionar</button>
+        </div>
+        <div class="task-filters">
+            <button id="filter-all">Todas</button>
+            <button id="filter-pending">Pendentes</button>
+            <button id="filter-completed">Concluídas</button>
+            <button id="filter-today">Para Hoje</button>
+            <button id="clear-all">Limpar Tudo</button>
+        </div>
+        <ul id="task-list"></ul>
+        <div id="task-counter">Total de Tarefas: 0</div>
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Editar Tarefa</h2>
+                <input type="text" id="edit-task-input">
+                <input type="date" id="edit-due-date">
+                <button id="save-edit-btn">Salvar Alterações</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
